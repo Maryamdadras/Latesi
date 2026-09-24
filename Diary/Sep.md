@@ -42,7 +42,7 @@ The guidelines outline specific technical approaches and file formats based on t
     2D and 3D Digitization: 2D scanning can be performed using various professional scanners (flatbed, planetary, virtual drum) or digital cameras, while 3D digitization relies on laser scanning and photogrammetry.   
     File Formats: For long-term preservation, master files must be uncompressed and lossless. Recommended master image formats are RAW (preferably DNG) and uncompressed TIFF (16 to 48-bit), whereas JPEGs are recommended for web access copies. Video masters should be captured in AVI 2160p 4K, and audio masters should use linear PCM in WAV or BWF formats.   
     Metadata: Projects must use the METS (Metadata Encoding and Transmission Standard) schema to organize digital objects. Metadata is categorized into descriptive, administrative (including technical and copyright data), structural, and preservation subsets. Technical metadata formats like Exif, IPTC, and XMP are used to record capture parameters.   
-    File Nomenclature: Files must follow a strict naming convention to ensure unique identification: InstituteCode+ObjectCode+ProgressiveNumber.Extension.   
+    File Nomenclature: Files must follow a strict naming convention to ensure unique identification: InstituteCode+ObjectCode+ProgressiveNumber.Extension.
     
 Project Management, Quality Control, and StorageThe guidelines detail how to structure the administrative and logistical aspects of a digitization project.
     Cost Management: Project budgets must explicitly account for human resources, specialized equipment (purchased, rented, or outsourced), asset packaging, transport, insurance, and long-term storage infrastructure.   
