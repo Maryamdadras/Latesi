@@ -75,7 +75,7 @@ Quality Control and Storage
 
 
 
-
+------------------------------------------------------------------------------------
 15 september 2026:
 Your Action Plan
 To successfully model your thesis and internship project, you should actively document and prepare for the five workflow phases the professor outlined:
@@ -128,7 +128,7 @@ Requirement Analysis: Write the guidelines for how a digital humanist should sit
 
 Validation & QA: Outline your error-tracking loops. How do you measure the time a step takes? If you spot a repeated error in the metadata, what is the protocol for fixing the root cause?
 
-
+------------------------------------------------------------------------------------
 
 17 September 2026:
 
@@ -155,11 +155,35 @@ Crucial Things to Take Note Of:
 
 Key Takeaways & Workflow Constraints:
 
-Inventory & Naming Protocol: The museum must provide the Excel inventory before shooting begins. To avoid losing track of physical items, the 4-digit inventory ID will be copy-pasted directly from the Excel sheet into Capture One during the shoot.
+Inventory & Naming Protocol: The museum must provide the Excel inventory before shooting begins. To avoid losing track of physical items, the 4-digit inventory ID will be copy-pasted directly from the Excel sheet into Capture One during the shoot. 
 
-The Bottleneck (Operator Fatigue): Shooting continuously in a dark room with a lightbox causes severe eye strain. The workflow is strictly capped at ~60 shots (30 coins) per hour, for a maximum of 4 hours per day (approx. 120 coins/day).
+Physical-to-Digital Correspondence (Risk Management): Because the Risorgimento coins lack physical ID tags (talloncini) and our team lacks the numismatic expertise to identify them by sight, the museum curators must take full responsibility for the physical-to-digital link. During the shoot, a curator must physically hand us each coin and explicitly state its exact inventory number (e.g., "This is inventory 14753"). Only then will the operator place it in the lightbox, shoot it, and paste that ID into Capture One. This protocol protects the team from liability and prevents the irreversible mislabeling of historical artifacts.
 
-"Daily + 1" Post-Production: The capture PC cannot shoot and post-process simultaneously. Data will be transferred to an external Hard Drive after every session. The next day, on a separate workstation, the RAW files will be exported to TIFF, cropped to isolate the coin on a black background, and exported to JPEG.
+The Bottleneck (Operator Fatigue): Shooting continuously in a dark room with a lightbox causes severe eye strain. The workflow is strictly capped at ~60 shots (30 coins) per hour, for a maximum of 4 hours per day (approx. 120 coins/day). Each coin needs two shots, one from the front and one from the back and 30 seconds for each shot which will be a minute for each coin. and of course in first days, will we should count the number of the coins that we will take the photo of them per day, and have a more accurate estimation based on that. 
+
+Timeline & Effort Estimation:
+Total Asset Volume: The project comprises a total of 4,074 items, which includes 3,804 archaeological items and 270 Risorgimento medals.
+
+Production Speed: The maximum sustainable shooting speed is estimated at 60 photos per hour. Because each item requires an obverse and reverse shot, the processing rate is 30 items per hour.
+
+Daily Capacity & Fatigue Limits: To mitigate operator fatigue and eye strain from the lightbox, shooting is strictly capped at 4 hours per session, resulting in a maximum daily output of 120 items.
+
+Total Estimated Effort: Dividing the 4,074 items by the daily capacity of 120 items yields a required effort of 34 working days (or capture sessions) to complete the physical digitization.
+
+Calendar Projection: Because the museum schedule may not accommodate a 5-day work week, these 34 sessions will be spread out over several months, projecting a completion date around December before the holidays.
+
+Bidirectional Naming & Tracking Protocol: The museum must provide the Excel inventory before shooting begins. To avoid losing track of physical items, a strict two-way tracking step is required during the shoot. First, the 4-digit inventory ID will be copy-pasted directly from the Excel sheet into Capture One to name the RAW file. Second, immediately after the shot is taken, the operator must record the camera's generated photo sequence number back into that exact row in the Excel sheet. This creates a foolproof, real-time cross-reference between the digital file and the museum's catalog data.
+
+Data Management & "Daily -1" Post-Processing Workflow
+
+    Cloud Syncing for Project Tracking: The master tracking spreadsheet and Gantt chart will be stored on OneDrive as a fixed local copy and synced via a mobile hotspot. This allows the team to track production metrics and project advancement in real-time without relying on the museum's restricted IT network.
+
+    Session Cloning (Hard Drive Backup): Because the Nikon camera generates massive files that will quickly fill the capture PC's local storage, the entire Capture One working folder must be cloned to an external hard drive at the end of every shooting session.
+
+    Parallel Post-Processing: The primary capture PC cannot be used for post-processing while a shooting session is actively taking place. The cloned external hard drive will be transferred to a NAS or a secondary workstation to perform the RAW to TIFF/JPEG conversions and image cropping in parallel.
+
+    The "Daily -1" Quality Control Loop: Post-processing will strictly follow a "Daily -1" schedule, meaning the batch of 120–150 photos taken during a session is processed the very next day. This ensures that any critical capture errors are caught immediately before the physical coins are permanently archived away by the museum, preventing a cascading failure across multiple days of shooting.
+
 
 The PND Constraint vs. Physical Reality: The PND requires color checkers in every shot. However, macro lenses physically cannot fit a standard color checker in the frame with a tiny coin without losing focus. The solution: calibration shots will be taken separately at the beginning and end of sessions, and technical parameters will be embedded directly into the EXIF metadata.
 
@@ -172,3 +196,31 @@ External hard drive, extension cords, and power strips.
 Plastic/metal tweezers and an optical center marker (sticker) to ensure coins stay on-axis when flipped from obverse (Dritto) to reverse (Rovescio).
 
 A mobile hotspot (due to lack of admin Wi-Fi access) to sync the Excel sheets, "Logical Sensors" tracker, and Gantt chart via OneDrive.
+
+
+Documents:
+Official Project Authorization & Hardware AllocationDocument: Verbale di affidamento di beni mobili inventariati (Protocol 09_26)
+Location: Museo civico Archeologico, via dell'Archiginnasio 2, 40124 Bologna.
+Official Duration: September 18, 2026 – November 30, 2026. (Note: This tight deadline aligns with our projected 34 shooting sessions, meaning the physical digitization must be strictly completed before December).   
+
+Assigned Institutional Equipment:
+The following university-owned equipment has been officially assigned to Marco Serra and the sub-assigned team (Silvia, Paolo, Tommaso, Michela) for the digitization of the Risorgimento and Archaeological coin collections:   
+Camera: NIKON D850 (44 Megapixel) with 24x120mm lens (Inventory: 01897 A.N5).   C
+apture Station: Lenovo ThinkCentre M75s Gen2 Desktop PC (Inventory: 02272 A.N5).   Monitor: PHILIPS 23.8" 16:9 VGA + HDMI (Inventory: 02058 A.N5).   
+Color Checkers: IMAGE ENGINEERING TE262-UTT-A4-1 and TE236 EXTENDED 1 (Inventories: 02398 A.N5 & 02399 A.N5).   
+
+Project Manager Notes: This document proves that the team is working with a high-end 44 Megapixel sensor (Nikon D850). However, notice the lens is a standard 24-120mm, which explains why the team in the meeting was discussing bringing their own macro tubes or lenses to shoot the tiny coins properly!
+
+Official Tender Specifications (Capitolato) - Numismatic CollectionsGeneral Constraints & DeliveryProject Framework: The digitization is part of the "SIMBOLO" project, funded by the PR-FESR 2021-2027. All activities must comply with the National Digitalization Plan (PND).   
+Deadline: All interventions across the asset groups must be completed by November 30, 2026.   
+Physical Location: The capture setup must be located at the Museo Civico Archeologico (Via dell'Archiginnasio 2) in an exclusive space (minimum 2 sq. meters) with controlled lighting.   
+Asset Handling: All identification, inventory recognition, and physical handling of the numismatic assets will be performed exclusively by museum personnel.   
+Group III: Archaeological Coins (Tabarroni Collection)Volume & Dimensions: 3,804 items (including 250 pieces of paper money). Coin diameters range from 5 mm to 100 mm.   Capture Standards: Minimum optical resolution of 600 PPI at the object's real dimension. The camera sensor must be perfectly parallel to the asset. Each shot must include a colorimetric and metric reference in the margins, and a dedicated ICC profile must be created per session. Minimum views required are Obverse and Reverse (Diritto/Rovescio).   File Deliverables: Uncompressed TIFF 6.0 (Master) and high-quality JPEG for web/IIIF (Derivative). Both formats must share the exact same filename. The derivative JPEG must be cropped to remove the colorimetric/metric references.   Naming Convention: InstituteCode + CollectionCode + ObjectCode + ViewIdentifier (D for Diritto, R for Rovescio) + Extension (e.g., MCABo_Num_95812D.tif).   Metadata: A MAG (Metadati Amministrativi Gestionali) XML file containing digitization info and MD5 checksums must be generated for each image.   
+Group IV: Risorgimento Coins & Medals (XIX-XX Century)Volume & Dimensions: Approx. 270 items ranging from 20 mm to 60 mm in diameter.   
+Capture Standards: Identical to Group III (600 PPI, parallel sensor, obverse/reverse views, colorimetric/metric references), but with an added requirement: the shot must explicitly include an indication of the object's identifying inventory number.   File Deliverables & Metadata: Identical to Group III (TIFF Masters, cropped JPEGs, matching filenames, and MAG XML metadata).   
+
+
+questions:
+as for the pictures of back and front of each coin we will use the sollution of adding D for the front (where the worth of the coin isn't mentioned) and R for the back (where the worth of the coin is mentioned) to the coin ID in the file name, what approach should we have for the Medals?
+
+Should I just focus on the Risorgimento coins for now or the medals?
