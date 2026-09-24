@@ -11,6 +11,8 @@ Option A (Ancient Coins): More complex, as evaluating external sources requires 
 
 Option B (Modern Coins/Medals): 19th-century artifacts from the Italian Risorgimento museum.
 
+Option B is chosen.
+
 Acknowledge the Technical Workflow: Prepare to structure your project around four core phases:
 
 Digitalization (image acquisition).
@@ -38,14 +40,13 @@ The document represents Annex 1 of Italy's National Digitalization Plan of Cultu
 
 Methodology and Technical Standards
 The guidelines outline specific technical approaches and file formats based on the type of asset being digitized:
-
     2D and 3D Digitization: 2D scanning can be performed using various professional scanners (flatbed, planetary, virtual drum) or digital cameras, while 3D digitization relies on laser scanning and photogrammetry.   
     File Formats: For long-term preservation, master files must be uncompressed and lossless. Recommended master image formats are RAW (preferably DNG) and uncompressed TIFF (16 to 48-bit), whereas JPEGs are recommended for web access copies. Video masters should be captured in AVI 2160p 4K, and audio masters should use linear PCM in WAV or BWF formats.   
     Metadata: Projects must use the METS (Metadata Encoding and Transmission Standard) schema to organize digital objects. Metadata is categorized into descriptive, administrative (including technical and copyright data), structural, and preservation subsets. Technical metadata formats like Exif, IPTC, and XMP are used to record capture parameters.   
-    File Nomenclature: Files must follow a strict naming convention to ensure unique identification: InstituteCode+ObjectCode+ProgressiveNumber.Extension.
+    File Nomenclature: Files must follow a strict naming convention to ensure unique identification: InstituteCode+ObjectCode+ProgressiveNumber.Extension.   
     
 Project Management, Quality Control, and StorageThe guidelines detail how to structure the administrative and logistical aspects of a digitization project.
-    Cost Management: Project budgets must explicitly account for human resources, specialized equipment (purchased, rented, or outsourced), asset packaging, transport, insurance, and long-term storage infrastructure.   
+Cost Management: Project budgets must explicitly account for human resources, specialized equipment (purchased, rented, or outsourced), asset packaging, transport, insurance, and long-term storage infrastructure.   
     Quality Assurance: The document provides a framework for drafting technical tender specifications and mandates rigorous quality testing. This includes testing an initial technical prototype and conducting periodic checks during different progress stages (SAL) to evaluate image readability, completeness, resolution accuracy, and metadata linking.   
     Storage and Delivery: Final deliverables (master files, derivatives, and metadata) must be stored in duplicate on secure media. Approved storage solutions include Cloud infrastructures, designated digital libraries, Hard Disk Drives (HDDs), and NAS systems configured with RAID 1.  
 
@@ -75,7 +76,7 @@ Quality Control and Storage
 
 
 
-17 september 2026:
+15 september 2026:
 Your Action Plan
 To successfully model your thesis and internship project, you should actively document and prepare for the five workflow phases the professor outlined:
 
@@ -127,3 +128,47 @@ Requirement Analysis: Write the guidelines for how a digital humanist should sit
 
 Validation & QA: Outline your error-tracking loops. How do you measure the time a step takes? If you spot a repeated error in the metadata, what is the protocol for fixing the root cause?
 
+
+
+17 September 2026:
+
+The meeting with Silvia:
+
+Crucial Things to Take Note Of:
+
+1. The team is balancing strict national guidelines (PND) with the harsh physical realities of digitization. You need to document these constraints in your thesis as part of your "Risk Management" and "Methodology" sections:
+    1. The Human Factor (Fatigue): Digitizing is physically taxing. The professor capped the estimate at 60 shots (30 coins) per hour for a maximum of 4 hours per day to prevent the operators from losing their minds staring into a lightbox. This translates to about 120 coins a day, requiring 40–45 workdays. 
+    2. The "Naming" Risk: Typing inventory numbers manually is a massive risk. The protocol is to use the museum-provided Excel sheet to copy and paste the 4-digit ID directly into Capture One as the photos are taken. This ensures the RAW files are "christened" correctly from the start. 
+    3. The PND Resolution Conflict: The National Digitalization Plan (PND) requires 5,000 pixels on the long edge, but physically shooting tiny coins with a macro lens maxes out around 3,800 pixels. The team will note this technical reality in the EXIF metadata rather than artificially upscaling the images. 
+    4. Asynchronous Post-Processing: The capture PC cannot handle shooting and post-processing simultaneously. Data will be backed up to an external hard drive every session so post-processing (RAW to TIFF/JPEG conversion and cropping) can happen on a different workstation. 
+    5. The Color Checker Compromise: A standard color checker won't fit in the macro frame with the coin, and the client wants the final images cropped on a black background anyway. The team will use the color checker for initial/final calibration, but it won't be in every individual cropped shot. 
+2. Your Immediate Action ItemsHere is exactly what you should do to establish yourself as the project's digital humanist and process manager:Set up the "Logical Sensors" Tracker: The professor specifically asked you to track productivity during the first few days. Set up an Excel or Google Sheet (to be synced locally via a mobile hotspot, since you won't have admin Wi-Fi access). Create columns for: Date, Session Duration, Operator, Number of Coins Processed, and Notes/Bottlenecks. 
+    Draft the Initial Gantt Chart: Use the professor's rough math to draft a baseline project timeline.
+    Total Items: ~4,074 coins/medals (270 Risorgimento + 3,804 archaeological). 
+    Pace: 120 coins per 4-hour session.   
+    Timeline: ~34 sessions.
+    Map this out from now until December, assuming 2 to 4 sessions a week depending on museum availability.   
+    
+    Document the Pre-Flight Checklist: Silvia will write down the physical setup requirements based on the meeting. This includes the lightbox, cables, power strip, extension cord, polarizing filter (for shiny silver/bronze coins), external hard drive, and the museum's pre-supplied Excel inventory.   
+    
+    Attend the First Shoot: Take the professor up on his offer to join the first session. Your job isn't to take the photos, but to observe the workflow, time the actual process (are they hitting 30 coins an hour?), and document any unforeseen issues.
+
+Key Takeaways & Workflow Constraints:
+
+Inventory & Naming Protocol: The museum must provide the Excel inventory before shooting begins. To avoid losing track of physical items, the 4-digit inventory ID will be copy-pasted directly from the Excel sheet into Capture One during the shoot.
+
+The Bottleneck (Operator Fatigue): Shooting continuously in a dark room with a lightbox causes severe eye strain. The workflow is strictly capped at ~60 shots (30 coins) per hour, for a maximum of 4 hours per day (approx. 120 coins/day).
+
+"Daily + 1" Post-Production: The capture PC cannot shoot and post-process simultaneously. Data will be transferred to an external Hard Drive after every session. The next day, on a separate workstation, the RAW files will be exported to TIFF, cropped to isolate the coin on a black background, and exported to JPEG.
+
+The PND Constraint vs. Physical Reality: The PND requires color checkers in every shot. However, macro lenses physically cannot fit a standard color checker in the frame with a tiny coin without losing focus. The solution: calibration shots will be taken separately at the beginning and end of sessions, and technical parameters will be embedded directly into the EXIF metadata.
+
+Equipment & Setup Checklist:
+
+Lightbox, macro tubes, fake battery, and polarizing filter (for shiny silver/bronze coins).
+
+External hard drive, extension cords, and power strips.
+
+Plastic/metal tweezers and an optical center marker (sticker) to ensure coins stay on-axis when flipped from obverse (Dritto) to reverse (Rovescio).
+
+A mobile hotspot (due to lack of admin Wi-Fi access) to sync the Excel sheets, "Logical Sensors" tracker, and Gantt chart via OneDrive.
