@@ -1,267 +1,267 @@
-14 september 2026:
-Thesis & Project Tasks
 
-Literature Review: Research existing literature and best practices regarding the digitalization of cultural heritage. This will form the theoretical and methodological framework for your thesis.
+### 14 September 2026: Thesis & Project Tasks
 
-Read the PND: Read the Piano Nazionale di Digitalizzazione (PND) PDF that the professor shared with you in the chat to understand the national guidelines.
+#### Core Tasks
 
-Choose a Dataset: Decide which collection you want to focus on for the metadata enrichment phase. The two options are:
-
-Option A (Ancient Coins): More complex, as evaluating external sources requires specific archaeological competence.
-
-Option B (Modern Coins/Medals): 19th-century artifacts from the Italian Risorgimento museum.
-
-Option B is chosen.
-
-Acknowledge the Technical Workflow: Prepare to structure your project around four core phases:
-
-Digitalization (image acquisition).
-
-Post-processing (normalizing image geometry to fix macro-lens distortion).
-
-Reconciling catalog data.
-
-Descriptive enrichment (linking internal data with external Open Source databases).
+* **Literature Review:** Research existing literature and best practices regarding the digitalization of cultural heritage. This will form the theoretical and methodological framework for my thesis.
+* **Read the PND:** Read the *Piano Nazionale di Digitalizzazione* (PND) PDF that the professor shared with me in the chat to understand the national guidelines.
+* **Choose a Dataset:** Decide which collection I want to focus on for the metadata enrichment phase. The two options are:
+* **Option A (Ancient Coins):** More complex, as evaluating external sources requires specific archaeological competence.
+* **Option B (Modern Coins/Medals):** 19th-century artifacts from the Italian Risorgimento museum. *(Note: Option B is chosen).*
 
 
-Summary of the Professor's Statements
-
-Focusing on establishing a workflow for the digitization and descriptive enrichment of a numismatic collection. He advises prioritizing a methodological approach over a content-driven one, noting that evaluating the strict historical validity of archaeological coins falls outside his technical expertise. By focusing on methodology, I can build a flexible pipeline that demonstrates how to effectively connect internal catalog data with various external open-source databases.
-
-Regarding technical execution, the Professor clarifies that while I will not manage the physical camera setup, I must document the digitization phase as a project case study. He highlights a specific challenge: photographing high-resolution micro-objects like coins with macro lenses introduces geometric distortion. Consequently, my proposed workflow must incorporate a post-processing phase utilizing software libraries to normalize the image geometry before reconciling the technical metadata with the descriptive catalog data.
-
-He instructs me to begin a literature review on digitization best practices, sharing the mandatory Italian Piano Nazionale di Digitalizzazione (PND) in the chat as my primary normative reference. Additionally, referencing external project materials can help me document the operational constraints as I structure the planning model for the shooting activities.
-
-
-PND Summary:
-
-Overview and Objectives
-The document represents Annex 1 of Italy's National Digitalization Plan of Cultural Heritage (2022-2023) and provides technical and theoretical guidelines for cultural institutions undertaking digitization projects. The primary motivations for digitizing cultural assets include preserving physical originals, enhancing public access and valorization, facilitating scientific study and diagnosis, and recovering legacy digitization campaigns. Before digitization begins, assets must be carefully selected, inventoried, and assigned a unique physical identifier to link the physical object with its digital counterpart. To execute these tasks, the guidelines recommend assembling a multidisciplinary team that includes roles such as a Project Manager, Conservator, Restorer, Technical Operator, Cataloger, and IT specialists.   
-
-Methodology and Technical Standards
-The guidelines outline specific technical approaches and file formats based on the type of asset being digitized:
-    2D and 3D Digitization: 2D scanning can be performed using various professional scanners (flatbed, planetary, virtual drum) or digital cameras, while 3D digitization relies on laser scanning and photogrammetry.   
-    File Formats: For long-term preservation, master files must be uncompressed and lossless. Recommended master image formats are RAW (preferably DNG) and uncompressed TIFF (16 to 48-bit), whereas JPEGs are recommended for web access copies. Video masters should be captured in AVI 2160p 4K, and audio masters should use linear PCM in WAV or BWF formats.   
-    Metadata: Projects must use the METS (Metadata Encoding and Transmission Standard) schema to organize digital objects. Metadata is categorized into descriptive, administrative (including technical and copyright data), structural, and preservation subsets. Technical metadata formats like Exif, IPTC, and XMP are used to record capture parameters.   
-    File Nomenclature: Files must follow a strict naming convention to ensure unique identification: InstituteCode+ObjectCode+ProgressiveNumber.Extension.   
-    
-Project Management, Quality Control, and StorageThe guidelines detail how to structure the administrative and logistical aspects of a digitization project.
-Cost Management: Project budgets must explicitly account for human resources, specialized equipment (purchased, rented, or outsourced), asset packaging, transport, insurance, and long-term storage infrastructure.   
-    Quality Assurance: The document provides a framework for drafting technical tender specifications and mandates rigorous quality testing. This includes testing an initial technical prototype and conducting periodic checks during different progress stages (SAL) to evaluate image readability, completeness, resolution accuracy, and metadata linking.   
-    Storage and Delivery: Final deliverables (master files, derivatives, and metadata) must be stored in duplicate on secure media. Approved storage solutions include Cloud infrastructures, designated digital libraries, Hard Disk Drives (HDDs), and NAS systems configured with RAID 1.  
-
-DIGITALIZATION WORKFLOW BASED ON PND:
-
-Preparation and Setup
-    Assess the conservation status of the items and perform necessary physical cleaning or preliminary restoration.   
-    Assign a unique physical identifier to each object to logically link the physical item to its catalog description.   
-    Calibrate the optical equipment and create an input ICC color profile using specific targets like the ColorChecker.   
-
-Acquisition (Scanning/Shooting)
-    Capture the entire object, including blank pages, borders, and bindings, ensuring the sensor remains perfectly parallel to the subject.   
-    Include a colorimetric and metric reference scale in the capture area, or produce a dedicated initial shot containing these references.   
-    Save the initial digital capture strictly as an uncompressed RAW file, with DNG being the preferred format.   
-
-Post-Production and Metadata
-    Process images on calibrated monitors to generate a secondary uncompressed 16-bit or 48-bit TIFF master.   
-    Apply minor necessary adjustments, such as white balance, brightness, and contrast, exclusively to the TIFF file to keep the RAW file unaltered.   
-    Track all post-production modifications using open sidecar files, such as XMP.   
-    Rename all files using the mandatory syntax: InstituteCode+ObjectCode+ProgressiveNumber.Extension.   
-    Generate METS-compliant XML metadata to encode the structural, descriptive, technical, and administrative properties of the digital object.   
-
-Quality Control and Storage
-    Conduct a preliminary prototype test, followed by periodic quality checks at different project advancement stages to verify resolution, color accuracy, and file consistency.   
-    Save all master files, derivatives, and metadata in duplicate across secure infrastructures such as a NAS, Cloud storage, or offline Hard Disks.  
+* **Acknowledge the Technical Workflow:** Prepare to structure my project around four core phases:
+1. Digitalization (image acquisition).
+2. Post-processing (normalizing image geometry to fix macro-lens distortion).
+3. Reconciling catalog data.
+4. Descriptive enrichment (linking internal data with external Open Source databases).
 
 
 
-------------------------------------------------------------------------------------
-15 september 2026:
-Your Action Plan
-To successfully model your thesis and internship project, you should actively document and prepare for the five workflow phases the professor outlined:
+#### Summary of the Professor's Statements
 
-Phase 1: Data Normalization. It will be needed to take raw data (like Excel inventory lists provided by the museum) and convert them into a structured relational database that links physical objects to their source material.
+* **Methodological Focus:** The focus is on establishing a workflow for the digitization and descriptive enrichment of a numismatic collection. He advises prioritizing a methodological approach over a content-driven one, noting that evaluating the strict historical validity of archaeological coins falls outside his technical expertise. By focusing on methodology, I can build a flexible pipeline that demonstrates how to effectively connect internal catalog data with various external open-source databases.
+* **Technical Execution:** Regarding technical execution, the Professor clarifies that while I will not manage the physical camera setup, I must document the digitization phase as a project case study. He highlights a specific challenge: photographing high-resolution micro-objects like coins with macro lenses introduces geometric distortion. Consequently, my proposed workflow must incorporate a post-processing phase utilizing software libraries to normalize the image geometry before reconciling the technical metadata with the descriptive catalog data.
+* **Normative References:** He instructs me to begin a literature review on digitization best practices, sharing the mandatory Italian *Piano Nazionale di Digitalizzazione* (PND) in the chat as my primary normative reference. Additionally, referencing external project materials can help me document the operational constraints as I structure the planning model for the shooting activities.
 
-Phase 2: Acquisition & Post-Processing. It will be needed to document how the physical scan is performed (e.g., scanning a full sheet) and how custom applications are used to crop individual objects, extract geometric coordinates, and save the files as Master (TIFF) and Derivative (JPEG) formats.
+---
 
-Phase 3: Internal Metadata Generation. It will be needed to learn to associate the cropped digital objects with administrative/technical metadata (EXIF camera data, MAG standards) and descriptive metadata (the museum's inventory text).
+### PND Summary
 
-Phase 4: External Enrichment. This is where your methodological research comes in. You need to identify authoritative external databases (like Wikidata or VIAF) to enrich the local records with broader historical context.
+#### Overview and Objectives
 
-Phase 5: Validation. Plan to present the final, enriched dataset back to the domain experts (e.g., the archaeologists or historians) to confirm that the structured data actually serves their research needs.
+* **Scope & Motivation:** The document represents Annex 1 of Italy's National Digitalization Plan of Cultural Heritage (2022-2023) and provides technical and theoretical guidelines for cultural institutions undertaking digitization projects. The primary motivations for digitizing cultural assets include preserving physical originals, enhancing public access and valorization, facilitating scientific study and diagnosis, and recovering legacy digitization campaigns.
+* **Pre-Digitization:** Before digitization begins, assets must be carefully selected, inventoried, and assigned a unique physical identifier to link the physical object with its digital counterpart.
+* **Multidisciplinary Team:** To execute these tasks, the guidelines recommend assembling a multidisciplinary team that includes roles such as a Project Manager, Conservator, Restorer, Technical Operator, Cataloger, and IT specialists.
 
-Your Action Plan
-Incorporate "Logical Sensors" for Time Tracking: The professor highlights a major industry problem: the inability to estimate the time and cost of digitization projects due to a lack of historical data. Your workflow model must include timestamps (logical sensors) that record exactly when an object enters and exits a specific phase (e.g., administrative metadata entry).
+#### Methodology and Technical Standards
 
-Define a Requirement Analysis Phase: When linking external data sources (like Wikidata) to your digital objects, you cannot just link everything arbitrarily. Your methodology must include a formal requirement analysis step where you consult the domain experts (e.g., archaeologists, historians) to define exactly which external data is valuable to them.
+*The guidelines outline specific technical approaches and file formats based on the type of asset being digitized:*
 
-Establish a Validation and Error-Tracking Loop: Your workflow must include Quality Assurance (QA). If errors are detected during validation, they must be tracked and categorized. If a specific error occurs repeatedly (e.g., 90% of the time), your methodology should dictate a return to the initial process design to fix the root cause.
+* **2D and 3D Digitization:** 2D scanning can be performed using various professional scanners (flatbed, planetary, virtual drum) or digital cameras, while 3D digitization relies on laser scanning and photogrammetry.
+* **File Formats:** For long-term preservation, master files must be uncompressed and lossless. Recommended master image formats are RAW (preferably DNG) and uncompressed TIFF (16 to 48-bit), whereas JPEGs are recommended for web access copies. Video masters should be captured in AVI 2160p 4K, and audio masters should use linear PCM in WAV or BWF formats.
+* **Metadata:** Projects must use the METS (Metadata Encoding and Transmission Standard) schema to organize digital objects. Metadata is categorized into descriptive, administrative (including technical and copyright data), structural, and preservation subsets. Technical metadata formats like Exif, IPTC, and XMP are used to record capture parameters.
+* **File Nomenclature:** Files must follow a strict naming convention to ensure unique identification: `InstituteCode+ObjectCode+ProgressiveNumber.Extension`.
 
-Map the "Digital Humanist" Interventions: Your final thesis should serve as a step-by-step framework for anyone digitizing a collection for the first time. Clearly outline the workflow's start and end points, the individual steps, the specific criticalities/risks, and exactly where the Digital Humanist is required to intervene to guide the process.
+#### Project Management, Quality Control, and Storage
 
-Research Business Process Management (BPM): Start looking into process engineering literature applied to cultural heritage to back up your methodology. The professor mentions looking into the work of King's Digital Lab (specifically Elena/Arianna Ciula) and organizing your bibliography in Zotero.
+*The guidelines detail how to structure the administrative and logistical aspects of a digitization project:*
 
-OBJECTIVES:
-1) PROCESS MODEL: list of distinct atomic steps that starts from the physical object to the final dataset delivery.
-2) BASIC STEP DESCRIPTION: inventory collection and normalization, digital repro production, digital object post-production, technical metadata production, decriptive metadata production, external sources collection, dataset production, dataset validation.
-3) METODOLOGICAL GUIDELINES: core requirements analysis, metadata collection guidelines, validation guidelines, performance and QA assessments. 
+* **Cost Management:** Project budgets must explicitly account for human resources, specialized equipment (purchased, rented, or outsourced), asset packaging, transport, insurance, and long-term storage infrastructure.
+* **Quality Assurance:** The document provides a framework for drafting technical tender specifications and mandates rigorous quality testing. This includes testing an initial technical prototype and conducting periodic checks during different progress stages (SAL) to evaluate image readability, completeness, resolution accuracy, and metadata linking.
+* **Storage and Delivery:** Final deliverables (master files, derivatives, and metadata) must be stored in duplicate on secure media. Approved storage solutions include Cloud infrastructures, designated digital libraries, Hard Disk Drives (HDDs), and NAS systems configured with RAID 1.
+
+---
+
+### Digitalization Workflow Based on PND
+
+#### 1. Preparation and Setup
+
+* Assess the conservation status of the items and perform necessary physical cleaning or preliminary restoration.
+* Assign a unique physical identifier to each object to logically link the physical item to its catalog description.
+* Calibrate the optical equipment and create an input ICC color profile using specific targets like the ColorChecker.
+
+#### 2. Acquisition (Scanning/Shooting)
+
+* Capture the entire object, including blank pages, borders, and bindings, ensuring the sensor remains perfectly parallel to the subject.
+* Include a colorimetric and metric reference scale in the capture area, or produce a dedicated initial shot containing these references.
+* Save the initial digital capture strictly as an uncompressed RAW file, with DNG being the preferred format.
+
+#### 3. Post-Production and Metadata
+
+* Process images on calibrated monitors to generate a secondary uncompressed 16-bit or 48-bit TIFF master.
+* Apply minor necessary adjustments, such as white balance, brightness, and contrast, exclusively to the TIFF file to keep the RAW file unaltered.
+* Track all post-production modifications using open sidecar files, such as XMP.
+* Rename all files using the mandatory syntax: `InstituteCode+ObjectCode+ProgressiveNumber.Extension`.
+* Generate METS-compliant XML metadata to encode the structural, descriptive, technical, and administrative properties of the digital object.
+
+#### 4. Quality Control and Storage
+
+* Conduct a preliminary prototype test, followed by periodic quality checks at different project advancement stages to verify resolution, color accuracy, and file consistency.
+* Save all master files, derivatives, and metadata in duplicate across secure infrastructures such as a NAS, Cloud storage, or offline Hard Disks.
 
 
-To do list:
-
-Basic Step Descriptions
-Once your skeleton list is approved, you will write a brief description for each phase the professor outlined:
-
-Inventory & Normalization: Explain how you turn messy museum data into a relational database.
-
-Digital Repro & Post-Production: Detail the camera setup, capturing the physical asset, fixing geometric distortion, cropping, and generating the Master TIFF and Derivative JPEGs.
-
-Metadata Production: Define the technical metadata (EXIF, MAG) and how the descriptive metadata (inventory details) gets linked to the digital object using coordinates.
-
-External Sources & Dataset Production: Describe the process of linking the object to Wikidata or VIAF.
-
- 
-Methodological Guidelines
-This is where the "King's Digital Lab" engineering mindset comes into play. You aren't just describing what you did, but the rules for how anyone else should do it:
-
-Requirement Analysis: Write the guidelines for how a digital humanist should sit down with domain experts (archaeologists/historians) to figure out which external data is actually worth linking.
-
-Validation & QA: Outline your error-tracking loops. How do you measure the time a step takes? If you spot a repeated error in the metadata, what is the protocol for fixing the root cause?
 
 ------------------------------------------------------------------------------------
 
-17 September 2026:
+### 15 September 2026: Thesis Modeling & Action Plan
 
-The meeting with Silvia:
+#### The Five Workflow Phases
 
-Crucial Things to Take Note Of:
+To successfully model my thesis and internship project, I should actively document and prepare for the five workflow phases the professor outlined:
 
-1. The team is balancing strict national guidelines (PND) with the harsh physical realities of digitization. You need to document these constraints in your thesis as part of your "Risk Management" and "Methodology" sections:
-    1. The Human Factor (Fatigue): Digitizing is physically taxing. The professor capped the estimate at 60 shots (30 coins) per hour for a maximum of 4 hours per day to prevent the operators from losing their minds staring into a lightbox. This translates to about 120 coins a day, requiring 40–45 workdays. 
-    2. The "Naming" Risk: Typing inventory numbers manually is a massive risk. The protocol is to use the museum-provided Excel sheet to copy and paste the 4-digit ID directly into Capture One as the photos are taken. This ensures the RAW files are "christened" correctly from the start. 
-    3. The PND Resolution Conflict: The National Digitalization Plan (PND) requires 5,000 pixels on the long edge, but physically shooting tiny coins with a macro lens maxes out around 3,800 pixels. The team will note this technical reality in the EXIF metadata rather than artificially upscaling the images. 
-    4. Asynchronous Post-Processing: The capture PC cannot handle shooting and post-processing simultaneously. Data will be backed up to an external hard drive every session so post-processing (RAW to TIFF/JPEG conversion and cropping) can happen on a different workstation. 
-    5. The Color Checker Compromise: A standard color checker won't fit in the macro frame with the coin, and the client wants the final images cropped on a black background anyway. The team will use the color checker for initial/final calibration, but it won't be in every individual cropped shot. 
-2. Your Immediate Action ItemsHere is exactly what you should do to establish yourself as the project's digital humanist and process manager:Set up the "Logical Sensors" Tracker: The professor specifically asked you to track productivity during the first few days. Set up an Excel or Google Sheet (to be synced locally via a mobile hotspot, since you won't have admin Wi-Fi access). Create columns for: Date, Session Duration, Operator, Number of Coins Processed, and Notes/Bottlenecks. 
-    Draft the Initial Gantt Chart: Use the professor's rough math to draft a baseline project timeline.
-    Total Items: ~4,074 coins/medals (270 Risorgimento + 3,804 archaeological). 
-    Pace: 120 coins per 4-hour session.   
-    Timeline: ~34 sessions.
-    Map this out from now until December, assuming 2 to 4 sessions a week depending on museum availability.   
-    
-    Document the Pre-Flight Checklist: Silvia will write down the physical setup requirements based on the meeting. This includes the lightbox, cables, power strip, extension cord, polarizing filter (for shiny silver/bronze coins), external hard drive, and the museum's pre-supplied Excel inventory.   
-    
-    Attend the First Shoot: Take the professor up on his offer to join the first session. Your job isn't to take the photos, but to observe the workflow, time the actual process (are they hitting 30 coins an hour?), and document any unforeseen issues.
+* **Phase 1: Data Normalization:** It will be needed to take raw data (like Excel inventory lists provided by the museum) and convert them into a structured relational database that links physical objects to their source material.
+* **Phase 2: Acquisition & Post-Processing:** It will be needed to document how the physical scan is performed (e.g., scanning a full sheet) and how custom applications are used to crop individual objects, extract geometric coordinates, and save the files as Master (TIFF) and Derivative (JPEG) formats.
+* **Phase 3: Internal Metadata Generation:** It will be needed to learn to associate the cropped digital objects with administrative/technical metadata (EXIF camera data, MAG standards) and descriptive metadata (the museum's inventory text).
+* **Phase 4: External Enrichment:** This is where my methodological research comes in. I need to identify authoritative external databases (like Wikidata or VIAF) to enrich the local records with broader historical context.
+* **Phase 5: Validation:** Plan to present the final, enriched dataset back to the domain experts (e.g., the archaeologists or historians) to confirm that the structured data actually serves their research needs.
 
-Key Takeaways & Workflow Constraints:
+#### My Action Plan
 
-Inventory & Naming Protocol: The museum must provide the Excel inventory before shooting begins. To avoid losing track of physical items, the 4-digit inventory ID will be copy-pasted directly from the Excel sheet into Capture One during the shoot. 
+Here is exactly what I will do to establish myself as the project's digital humanist and process manager:
 
-Physical-to-Digital Correspondence (Risk Management): Because the Risorgimento coins lack physical ID tags (talloncini) and our team lacks the numismatic expertise to identify them by sight, the museum curators must take full responsibility for the physical-to-digital link. During the shoot, a curator must physically hand us each coin and explicitly state its exact inventory number (e.g., "This is inventory 14753"). Only then will the operator place it in the lightbox, shoot it, and paste that ID into Capture One. This protocol protects the team from liability and prevents the irreversible mislabeling of historical artifacts.
+* **Incorporate "Logical Sensors" for Time Tracking:** The professor highlights a major industry problem: the inability to estimate the time and cost of digitization projects due to a lack of historical data. My workflow model must include timestamps (logical sensors) that record exactly when an object enters and exits a specific phase (e.g., administrative metadata entry).
+* **Define a Requirement Analysis Phase:** When linking external data sources (like Wikidata) to my digital objects, I cannot just link everything arbitrarily. My methodology must include a formal requirement analysis step where I consult the domain experts (e.g., archaeologists, historians) to define exactly which external data is valuable to them.
+* **Establish a Validation and Error-Tracking Loop:** My workflow must include Quality Assurance (QA). If errors are detected during validation, they must be tracked and categorized. If a specific error occurs repeatedly (e.g., 90% of the time), my methodology should dictate a return to the initial process design to fix the root cause.
+* **Map the "Digital Humanist" Interventions:** My final thesis should serve as a step-by-step framework for anyone digitizing a collection for the first time. Clearly outline the workflow's start and end points, the individual steps, the specific criticalities/risks, and exactly where the Digital Humanist is required to intervene to guide the process.
+* **Research Business Process Management (BPM):** Start looking into process engineering literature applied to cultural heritage to back up my methodology. The professor mentions looking into the work of King's Digital Lab (specifically Elena/Arianna Ciula) and organizing my bibliography in Zotero.
 
-The Bottleneck (Operator Fatigue): Shooting continuously in a dark room with a lightbox causes severe eye strain. The workflow is strictly capped at ~60 shots (30 coins) per hour, for a maximum of 4 hours per day (approx. 120 coins/day). Each coin needs two shots, one from the front and one from the back and 30 seconds for each shot which will be a minute for each coin. and of course in first days, will we should count the number of the coins that we will take the photo of them per day, and have a more accurate estimation based on that. 
+#### Core Objectives
 
-Timeline & Effort Estimation:
-Total Asset Volume: The project comprises a total of 4,074 items, which includes 3,804 archaeological items and 270 Risorgimento medals.
+1. **Process Model:** A list of distinct atomic steps that starts from the physical object to the final dataset delivery.
+2. **Basic Step Description:** Inventory collection and normalization, digital repro production, digital object post-production, technical metadata production, descriptive metadata production, external sources collection, dataset production, dataset validation.
+3. **Methodological Guidelines:** Core requirements analysis, metadata collection guidelines, validation guidelines, performance and QA assessments.
 
-Production Speed: The maximum sustainable shooting speed is estimated at 60 photos per hour. Because each item requires an obverse and reverse shot, the processing rate is 30 items per hour.
+---
 
-Daily Capacity & Fatigue Limits: To mitigate operator fatigue and eye strain from the lightbox, shooting is strictly capped at 4 hours per session, resulting in a maximum daily output of 120 items.
+#### To-Do List
 
-Total Estimated Effort: Dividing the 4,074 items by the daily capacity of 120 items yields a required effort of 34 working days (or capture sessions) to complete the physical digitization.
+**Basic Step Descriptions**
+*Once my skeleton list is approved, I will write a brief description for each phase the professor outlined:*
 
-Calendar Projection: Because the museum schedule may not accommodate a 5-day work week, these 34 sessions will be spread out over several months, projecting a completion date around December before the holidays.
+* **Inventory & Normalization:** Explain how I turn messy museum data into a relational database.
+* **Digital Repro & Post-Production:** Detail the camera setup, capturing the physical asset, fixing geometric distortion, cropping, and generating the Master TIFF and Derivative JPEGs.
+* **Metadata Production:** Define the technical metadata (EXIF, MAG) and how the descriptive metadata (inventory details) gets linked to the digital object using coordinates.
+* **External Sources & Dataset Production:** Describe the process of linking the object to Wikidata or VIAF.
 
-Bidirectional Naming & Tracking Protocol: The museum must provide the Excel inventory before shooting begins. To avoid losing track of physical items, a strict two-way tracking step is required during the shoot. First, the 4-digit inventory ID will be copy-pasted directly from the Excel sheet into Capture One to name the RAW file. Second, immediately after the shot is taken, the operator must record the camera's generated photo sequence number back into that exact row in the Excel sheet. This creates a foolproof, real-time cross-reference between the digital file and the museum's catalog data.
+**Methodological Guidelines**
+*This is where the "King's Digital Lab" engineering mindset comes into play. I'm not just describing what I did, but the rules for how anyone else should do it:*
 
-Data Management & "Daily -1" Post-Processing Workflow
+* **Requirement Analysis:** Write the guidelines for how a digital humanist should sit down with domain experts (archaeologists/historians) to figure out which external data is actually worth linking.
+* **Validation & QA:** Outline my error-tracking loops. How do I measure the time a step takes? If I spot a repeated error in the metadata, what is the protocol for fixing the root cause?
 
-    Cloud Syncing for Project Tracking: The master tracking spreadsheet and Gantt chart will be stored on OneDrive as a fixed local copy and synced via a mobile hotspot. This allows the team to track production metrics and project advancement in real-time without relying on the museum's restricted IT network.
+------------------------------------------------------------------------------------
 
-    Session Cloning (Hard Drive Backup): Because the Nikon camera generates massive files that will quickly fill the capture PC's local storage, the entire Capture One working folder must be cloned to an external hard drive at the end of every shooting session.
+### 17 September 2026: The Meeting with Silvia
 
-    Parallel Post-Processing: The primary capture PC cannot be used for post-processing while a shooting session is actively taking place. The cloned external hard drive will be transferred to a NAS or a secondary workstation to perform the RAW to TIFF/JPEG conversions and image cropping in parallel.
+#### Crucial Things to Take Note Of
 
-    The "Daily -1" Quality Control Loop: Post-processing will strictly follow a "Daily -1" schedule, meaning the batch of 120–150 photos taken during a session is processed the very next day. This ensures that any critical capture errors are caught immediately before the physical coins are permanently archived away by the museum, preventing a cascading failure across multiple days of shooting.
+The team is balancing strict national guidelines (PND) with the harsh physical realities of digitization. I need to document these constraints in my thesis as part of my "Risk Management" and "Methodology" sections:
 
+* **The Human Factor (Fatigue):** Digitizing is physically taxing. The professor capped the estimate at 60 shots (30 coins) per hour for a maximum of 4 hours per day to prevent the operators from losing their minds staring into a lightbox. This translates to about 120 coins a day, requiring 40–45 workdays.
+* **The "Naming" Risk:** Typing inventory numbers manually is a massive risk. The protocol is to use the museum-provided Excel sheet to copy and paste the 4-digit ID directly into Capture One as the photos are taken. This ensures the RAW files are "christened" correctly from the start.
+* **The PND Resolution Conflict:** The National Digitalization Plan (PND) requires 5,000 pixels on the long edge, but physically shooting tiny coins with a macro lens maxes out around 3,800 pixels. The team will note this technical reality in the EXIF metadata rather than artificially upscaling the images.
+* **Asynchronous Post-Processing:** The capture PC cannot handle shooting and post-processing simultaneously. Data will be backed up to an external hard drive every session so post-processing (RAW to TIFF/JPEG conversion and cropping) can happen on a different workstation.
+* **The Color Checker Compromise:** A standard color checker won't fit in the macro frame with the coin, and the client wants the final images cropped on a black background anyway. The team will use the color checker for initial/final calibration, but it won't be in every individual cropped shot.
 
-The PND Constraint vs. Physical Reality: The PND requires color checkers in every shot. However, macro lenses physically cannot fit a standard color checker in the frame with a tiny coin without losing focus. The solution: calibration shots will be taken separately at the beginning and end of sessions, and technical parameters will be embedded directly into the EXIF metadata.
+#### My Immediate Action Items
 
-Equipment & Setup Checklist:
+Here is exactly what I should do to establish myself as the project's digital humanist and process manager:
 
-Lightbox, macro tubes, fake battery, and polarizing filter (for shiny silver/bronze coins).
-
-External hard drive, extension cords, and power strips.
-
-Plastic/metal tweezers and an optical center marker (sticker) to ensure coins stay on-axis when flipped from obverse (Dritto) to reverse (Rovescio).
-
-A mobile hotspot (due to lack of admin Wi-Fi access) to sync the Excel sheets, "Logical Sensors" tracker, and Gantt chart via OneDrive.
-
-
-Documents:
-Official Project Authorization & Hardware AllocationDocument: Verbale di affidamento di beni mobili inventariati (Protocol 09_26)
-Location: Museo civico Archeologico, via dell'Archiginnasio 2, 40124 Bologna.
-Official Duration: September 18, 2026 – November 30, 2026. (Note: This tight deadline aligns with our projected 34 shooting sessions, meaning the physical digitization must be strictly completed before December).   
-
-Assigned Institutional Equipment:
-The following university-owned equipment has been officially assigned to Marco Serra and the sub-assigned team (Silvia, Paolo, Tommaso, Michela) for the digitization of the Risorgimento and Archaeological coin collections:   
-Camera: NIKON D850 (44 Megapixel) with 24x120mm lens (Inventory: 01897 A.N5).   
-Capture Station: Lenovo ThinkCentre M75s Gen2 Desktop PC (Inventory: 02272 A.N5).   
-Monitor: PHILIPS 23.8" 16:9 VGA + HDMI (Inventory: 02058 A.N5).   
-Color Checkers: IMAGE ENGINEERING TE262-UTT-A4-1 and TE236 EXTENDED 1 (Inventories: 02398 A.N5 & 02399 A.N5).   
-
-Project Manager Notes: This document proves that the team is working with a high-end 44 Megapixel sensor (Nikon D850). However, notice the lens is a standard 24-120mm, which explains why the team in the meeting was discussing bringing their own macro tubes or lenses to shoot the tiny coins properly!
+* **Set up the "Logical Sensors" Tracker:** The professor specifically asked me to track productivity during the first few days. Set up an Excel or Google Sheet (to be synced locally via a mobile hotspot, since I won't have admin Wi-Fi access). Create columns for: Date, Session Duration, Operator, Number of Coins Processed, and Notes/Bottlenecks.
+* **Draft the Initial Gantt Chart:** Use the professor's rough math to draft a baseline project timeline.
+* **Total Items:** ~4,074 coins/medals (270 Risorgimento + 3,804 archaeological).
+* **Pace:** 120 coins per 4-hour session.
+* **Timeline:** ~34 sessions. Map this out from now until December, assuming 2 to 4 sessions a week depending on museum availability.
 
 
-General Project Specifications
-Regulatory Framework: All activities must comply with the National Digitalization Plan (PND) guidelines published by the Central Institute for the Digitalization of Cultural Heritage (Digital Library of the MiC).   
-Prototyping & Delivery: A prototype must be presented within 10 days of starting the work. Final digitized materials must be delivered on electronic hard drives and retained as backups for at least 15 days.   
-Compliance & Safety: All services must comply with workplace safety regulations (Art. 26 of the Testo Unico), the "Do No Significant Harm" (DNSH) principle (Reg. EU 2021/241), climate and digital tagging, and gender equality.   
+* **Document the Pre-Flight Checklist:** Silvia will write down the physical setup requirements based on the meeting. This includes the lightbox, cables, power strip, extension cord, polarizing filter (for shiny silver/bronze coins), external hard drive, and the museum's pre-supplied Excel inventory.
+* **Attend the First Shoot:** Take the professor up on his offer to join the first session. My job isn't to take the photos, but to observe the workflow, time the actual process (are they hitting 30 coins an hour?), and document any unforeseen issues.
 
-LOTTO 1: Museo MorandiAssets & Volume: Approximately 320 small-format artworks (oils, watercolors, drawings, engravings) from the 20th century. Dimensions range from 35x30 cm to 85x90 cm (under 100 cm).   
-Required Shots: Approximately 425 shots, as paintings must be photographed both front and back.   
-Location: Operations will take place between the museum's deposits and exhibition rooms (Via don Minzoni 14, Bologna); artworks cannot be moved from the museum.  
-Timeline: The entire intervention must not exceed 9 months from the contract signing. The first tranche runs until May 2026, and the second from July to November 2026.  
+#### Key Takeaways & Workflow Constraints
 
-File Formats & Resolution:
+* **Inventory & Naming Protocol:** The museum must provide the Excel inventory before shooting begins. To avoid losing track of physical items, the 4-digit inventory ID will be copy-pasted directly from the Excel sheet into Capture One during the shoot.
+* **Bidirectional Naming & Tracking Protocol:** A strict two-way tracking step is required during the shoot. First, the 4-digit inventory ID will be copy-pasted directly from the Excel sheet into Capture One to name the RAW file. Second, immediately after the shot is taken, the operator must record the camera's generated photo sequence number back into that exact row in the Excel sheet. This creates a foolproof, real-time cross-reference between the digital file and the museum's catalog data.
+* **Physical-to-Digital Correspondence (Risk Management):** Because the Risorgimento coins lack physical ID tags (*talloncini*) and our team lacks the numismatic expertise to identify them by sight, the museum curators must take full responsibility for the physical-to-digital link. During the shoot, a curator must physically hand us each coin and explicitly state its exact inventory number (e.g., "This is inventory 14753"). Only then will the operator place it in the lightbox, shoot it, and paste that ID into Capture One. This protocol protects the team from liability and prevents the irreversible mislabeling of historical artifacts.
+* **The Bottleneck (Operator Fatigue):** Shooting continuously in a dark room with a lightbox causes severe eye strain. The workflow is strictly capped at ~60 shots (30 coins) per hour, for a maximum of 4 hours per day (approx. 120 coins/day). Each coin needs two shots, one from the front and one from the back, and 30 seconds for each shot (which is a minute for each coin). In the first days, we should count the number of coins photographed per day to have a more accurate estimation based on that.
+* **The PND Constraint vs. Physical Reality:** The PND requires color checkers in every shot. However, macro lenses physically cannot fit a standard color checker in the frame with a tiny coin without losing focus. The solution: calibration shots will be taken separately at the beginning and end of sessions, and technical parameters will be embedded directly into the EXIF metadata.
 
-Master TIFF: TIFF 6.0, uncompressed. 600 dpi for sizes up to A4; 400 dpi for larger than A4. Adobe RGB at 24-bit, or Pro Photo RGB at 48-bit for maximum quality.   
-High-Quality JPEG Derivative: 300 dpi, minimum 3000 pixels on the long edge, maximum quality compression (100%), sRGB or Gray gamma 2.2.   
-Low-Quality JPEG Derivative: 118 dpi, minimum 3000 pixels on the long edge, sRGB or Gray gamma 2.2.   
+#### Timeline & Effort Estimation
 
-LOTTO 2: Museo Civico Archeologico & Museo del Risorgimento
-This lot is divided into four distinct groups. All interventions for Lotto 2 must be completed by November 30, 2026.   
+* **Total Asset Volume:** The project comprises a total of 4,074 items, which includes 3,804 archaeological items and 270 Risorgimento medals.
+* **Production Speed:** The maximum sustainable shooting speed is estimated at 60 photos per hour. Because each item requires an obverse and reverse shot, the processing rate is 30 items per hour.
+* **Daily Capacity & Fatigue Limits:** To mitigate operator fatigue and eye strain from the lightbox, shooting is strictly capped at 4 hours per session, resulting in a maximum daily output of 120 items.
+* **Total Estimated Effort:** Dividing the 4,074 items by the daily capacity of 120 items yields a required effort of 34 working days (or capture sessions) to complete the physical digitization.
+* **Calendar Projection:** Because the museum schedule may not accommodate a 5-day work week, these 34 sessions will be spread out over several months, projecting a completion date around December before the holidays.
 
-GRUPPO I: Etruscan Necropolis Benacci Documentary Cards
+#### Data Management & "Daily -1" Post-Processing Workflow
 
-Assets: 929 loose sheets (21x15 cm) totaling 1042 sides to digitize.   
-Capture Specs: Recto and verso (if written). 400 DPI at real dimension, native ISO, Adobe RGB. A colorimetric and metric reference must be included in the margins. A ColorChecker and dedicated ICC profile are required for each session.   
-File Specs: Uncompressed TIFF 6.0 and JPEG (minimum 75% quality). MAG XML metadata containing MD5 checksums is required.   
-Location: Digitization takes place at the supplier's premises.   
+* **Cloud Syncing for Project Tracking:** The master tracking spreadsheet and Gantt chart will be stored on OneDrive as a fixed local copy and synced via a mobile hotspot. This allows the team to track production metrics and project advancement in real-time without relying on the museum's restricted IT network.
+* **Session Cloning (Hard Drive Backup):** Because the Nikon camera generates massive files that will quickly fill the capture PC's local storage, the entire Capture One working folder must be cloned to an external hard drive at the end of every shooting session.
+* **Parallel Post-Processing:** The primary capture PC cannot be used for post-processing while a shooting session is actively taking place. The cloned external hard drive will be transferred to a NAS or a secondary workstation to perform the RAW to TIFF/JPEG conversions and image cropping in parallel.
+* **The "Daily -1" Quality Control Loop:** Post-processing will strictly follow a "Daily -1" schedule, meaning the batch of 120–150 photos taken during a session is processed the very next day. This ensures that any critical capture errors are caught immediately before the physical coins are permanently archived away by the museum, preventing a cascading failure across multiple days of shooting.
 
-GRUPPO II: Etruscan Necropolis Benacci Technical Drawings
+#### Equipment & Setup Checklist
 
-Assets: Approximately 1,570 sheets (A4, A3, and out-of-scale) containing around 5,250 technical drawings in pencil.   
-Capture Specs: 400 PPI up to A4; 300 PPI for sizes larger than A4. Native ISO, Adobe RGB, with colorimetric/metric references.   
-Processing Specs: Requires automatic recognition and cropping of individual drawings while maintaining correct metric scales. An experimental phase involves automatic removal/cleaning of construction lines ("denoising").   
-Deliverables: ~1,570 TIFF+JPEG files of the full sheets, plus ~5,250 TIFF+JPEG files of the individually cropped drawings. MAG XML required.   Location: Digitization takes place at the supplier's premises.   
+* Lightbox, macro tubes, fake battery, and polarizing filter (for shiny silver/bronze coins).
+* External hard drive, extension cords, and power strips.
+* Plastic/metal tweezers and an optical center marker (sticker) to ensure coins stay on-axis when flipped from obverse (Dritto) to reverse (Rovescio).
+* A mobile hotspot (due to lack of admin Wi-Fi access) to sync the Excel sheets, "Logical Sensors" tracker, and Gantt chart via OneDrive.
 
-GRUPPO III: Tabarroni Numismatic Collection (Archeologico)
+---
 
-Assets: 3,804 items, including 250 pieces of paper money/credit documents. Coins range from 5 mm to 100 mm in diameter; paper items up to 35x27 cm. Materials include metal, plaster, and paper.   
-Capture Specs: 600 PPI at real dimension, sensor perfectly parallel and centered to the asset, native ISO, Adobe RGB. Minimum views required are Obverse (Diritto) and Reverse (Rovescio). A colorimetric and metric reference must be in the margin of every shot.   
-File Specs: Uncompressed TIFF 6.0 Master. A high-quality JPEG derivative must be generated and cropped to remove the colorimetric and metric references. MAG XML required.   
-Naming Convention: InstituteCode + CollectionCode + ObjectCode + View (D for Diritto, R for Rovescio) + Extension (e.g., MCABo_Num_95812D.tif).   
-Location: Museo Civico Archeologico (Via dell'Archiginnasio 2) in an exclusive space (min. 2 sq meters) with controlled lighting. Museum staff will handle all asset movement and identification.   
+### Documents
 
-GRUPPO IV: 19th-20th Century Numismatic Assets (Risorgimento)
+#### Official Project Authorization & Hardware Allocation
 
-Assets: Approximately 270 medals, decorations, badges, and 2 medal cabinets (40x40 cm). Coin diameters range from 20 mm to 60 mm.  
-Capture Specs: 600 PPI at real dimension, sensor parallel/centered, native ISO, Adobe RGB. Minimum views: Obverse and Reverse. The shot must include a colorimetric/metric reference and explicitly indicate the object's identifying inventory number.   
-File Specs: Uncompressed TIFF 6.0 Master and a high-quality JPEG cropped to remove references. MAG XML required.   
-Naming Convention: Follows a schema agreed upon with the museum.   
-Location: Museo Civico Archeologico (Via dell'Archiginnasio 2). Museum staff will handle all asset movement and identification.  
+* **Document:** Verbale di affidamento di beni mobili inventariati (Protocol 09_26)
+* **Location:** Museo civico Archeologico, via dell'Archiginnasio 2, 40124 Bologna.
+* **Official Duration:** September 18, 2026 – November 30, 2026. *(Note: This tight deadline aligns with our projected 34 shooting sessions, meaning the physical digitization must be strictly completed before December).*
+* **Assigned Institutional Equipment:** The following university-owned equipment has been officially assigned to Marco Serra and the sub-assigned team (Silvia, Paolo, Tommaso, Michela) for the digitization of the Risorgimento and Archaeological coin collections:
+* **Camera:** NIKON D850 (44 Megapixel) with 24x120mm lens (Inventory: 01897 A.N5).
+* **Capture Station:** Lenovo ThinkCentre M75s Gen2 Desktop PC (Inventory: 02272 A.N5).
+* **Monitor:** PHILIPS 23.8" 16:9 VGA + HDMI (Inventory: 02058 A.N5).
+* **Color Checkers:** IMAGE ENGINEERING TE262-UTT-A4-1 and TE236 EXTENDED 1 (Inventories: 02398 A.N5 & 02399 A.N5).
 
+
+* **Project Manager Notes:** This document proves that the team is working with a high-end 44 Megapixel sensor (Nikon D850). However, notice the lens is a standard 24-120mm, which explains why the team in the meeting was discussing bringing their own macro tubes or lenses to shoot the tiny coins properly!
+
+#### General Project Specifications (Capitolato)
+
+* **Regulatory Framework:** All activities must comply with the National Digitalization Plan (PND) guidelines published by the Central Institute for the Digitalization of Cultural Heritage (Digital Library of the MiC).
+* **Prototyping & Delivery:** A prototype must be presented within 10 days of starting the work. Final digitized materials must be delivered on electronic hard drives and retained as backups for at least 15 days.
+* **Compliance & Safety:** All services must comply with workplace safety regulations (Art. 26 of the Testo Unico), the "Do No Significant Harm" (DNSH) principle (Reg. EU 2021/241), climate and digital tagging, and gender equality.
+
+#### LOTTO 1: Museo Morandi
+
+* **Assets & Volume:** Approximately 320 small-format artworks (oils, watercolors, drawings, engravings) from the 20th century. Dimensions range from 35x30 cm to 85x90 cm (under 100 cm).
+* **Required Shots:** Approximately 425 shots, as paintings must be photographed both front and back.
+* **Location:** Operations will take place between the museum's deposits and exhibition rooms (Via don Minzoni 14, Bologna); artworks cannot be moved from the museum.
+* **Timeline:** The entire intervention must not exceed 9 months from the contract signing. The first tranche runs until May 2026, and the second from July to November 2026.
+* **File Formats & Resolution:**
+* **Master TIFF:** TIFF 6.0, uncompressed. 600 dpi for sizes up to A4; 400 dpi for larger than A4. Adobe RGB at 24-bit, or Pro Photo RGB at 48-bit for maximum quality.
+* **High-Quality JPEG Derivative:** 300 dpi, minimum 3000 pixels on the long edge, maximum quality compression (100%), sRGB or Gray gamma 2.2.
+* **Low-Quality JPEG Derivative:** 118 dpi, minimum 3000 pixels on the long edge, sRGB or Gray gamma 2.2.
+
+
+
+#### LOTTO 2: Museo Civico Archeologico & Museo del Risorgimento
+
+*Note: This lot is divided into four distinct groups. All interventions for Lotto 2 must be completed by November 30, 2026.*
+
+**GRUPPO I: Etruscan Necropolis Benacci Documentary Cards**
+
+* **Assets:** 929 loose sheets (21x15 cm) totaling 1042 sides to digitize.
+* **Capture Specs:** Recto and verso (if written). 400 DPI at real dimension, native ISO, Adobe RGB. A colorimetric and metric reference must be included in the margins. A ColorChecker and dedicated ICC profile are required for each session.
+* **File Specs:** Uncompressed TIFF 6.0 and JPEG (minimum 75% quality). MAG XML metadata containing MD5 checksums is required.
+* **Location:** Digitization takes place at the supplier's premises.
+
+**GRUPPO II: Etruscan Necropolis Benacci Technical Drawings**
+
+* **Assets:** Approximately 1,570 sheets (A4, A3, and out-of-scale) containing around 5,250 technical drawings in pencil.
+* **Capture Specs:** 400 PPI up to A4; 300 PPI for sizes larger than A4. Native ISO, Adobe RGB, with colorimetric/metric references.
+* **Processing Specs:** Requires automatic recognition and cropping of individual drawings while maintaining correct metric scales. An experimental phase involves automatic removal/cleaning of construction lines ("denoising").
+* **Deliverables:** ~1,570 TIFF+JPEG files of the full sheets, plus ~5,250 TIFF+JPEG files of the individually cropped drawings. MAG XML required.
+* **Location:** Digitization takes place at the supplier's premises.
+
+**GRUPPO III: Tabarroni Numismatic Collection (Archeologico)**
+
+* **Assets:** 3,804 items, including 250 pieces of paper money/credit documents. Coins range from 5 mm to 100 mm in diameter; paper items up to 35x27 cm. Materials include metal, plaster, and paper.
+* **Capture Specs:** 600 PPI at real dimension, sensor perfectly parallel and centered to the asset, native ISO, Adobe RGB. Minimum views required are Obverse (Diritto) and Reverse (Rovescio). A colorimetric and metric reference must be in the margin of every shot.
+* **File Specs:** Uncompressed TIFF 6.0 Master. A high-quality JPEG derivative must be generated and cropped to remove the colorimetric and metric references. MAG XML required.
+* **Naming Convention:** InstituteCode + CollectionCode + ObjectCode + View (D for Diritto, R for Rovescio) + Extension (e.g., MCABo_Num_95812D.tif).
+* **Location:** Museo Civico Archeologico (Via dell'Archiginnasio 2) in an exclusive space (min. 2 sq meters) with controlled lighting. Museum staff will handle all asset movement and identification.
+
+**GRUPPO IV: 19th-20th Century Numismatic Assets (Risorgimento)**
+
+* **Assets:** Approximately 270 medals, decorations, badges, and 2 medal cabinets (40x40 cm). Coin diameters range from 20 mm to 60 mm.
+* **Capture Specs:** 600 PPI at real dimension, sensor parallel/centered, native ISO, Adobe RGB. Minimum views: Obverse and Reverse. The shot must include a colorimetric/metric reference and explicitly indicate the object's identifying inventory number.
+* **File Specs:** Uncompressed TIFF 6.0 Master and a high-quality JPEG cropped to remove references. MAG XML required.
+* **Naming Convention:** Follows a schema agreed upon with the museum.
+* **Location:** Museo Civico Archeologico (Via dell'Archiginnasio 2). Museum staff will handle all asset movement and identification.
+
+
+------------------------------------------------------------------------------------
 
 ### September 25, 2026: Museum Capture Session & Workflow Testing
 
