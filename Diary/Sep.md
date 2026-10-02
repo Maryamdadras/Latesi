@@ -205,22 +205,115 @@ Official Duration: September 18, 2026 – November 30, 2026. (Note: This tight d
 
 Assigned Institutional Equipment:
 The following university-owned equipment has been officially assigned to Marco Serra and the sub-assigned team (Silvia, Paolo, Tommaso, Michela) for the digitization of the Risorgimento and Archaeological coin collections:   
-Camera: NIKON D850 (44 Megapixel) with 24x120mm lens (Inventory: 01897 A.N5).   C
-apture Station: Lenovo ThinkCentre M75s Gen2 Desktop PC (Inventory: 02272 A.N5).   Monitor: PHILIPS 23.8" 16:9 VGA + HDMI (Inventory: 02058 A.N5).   
+Camera: NIKON D850 (44 Megapixel) with 24x120mm lens (Inventory: 01897 A.N5).   
+Capture Station: Lenovo ThinkCentre M75s Gen2 Desktop PC (Inventory: 02272 A.N5).   
+Monitor: PHILIPS 23.8" 16:9 VGA + HDMI (Inventory: 02058 A.N5).   
 Color Checkers: IMAGE ENGINEERING TE262-UTT-A4-1 and TE236 EXTENDED 1 (Inventories: 02398 A.N5 & 02399 A.N5).   
 
 Project Manager Notes: This document proves that the team is working with a high-end 44 Megapixel sensor (Nikon D850). However, notice the lens is a standard 24-120mm, which explains why the team in the meeting was discussing bringing their own macro tubes or lenses to shoot the tiny coins properly!
 
-Official Tender Specifications (Capitolato) - Numismatic CollectionsGeneral Constraints & DeliveryProject Framework: The digitization is part of the "SIMBOLO" project, funded by the PR-FESR 2021-2027. All activities must comply with the National Digitalization Plan (PND).   
-Deadline: All interventions across the asset groups must be completed by November 30, 2026.   
-Physical Location: The capture setup must be located at the Museo Civico Archeologico (Via dell'Archiginnasio 2) in an exclusive space (minimum 2 sq. meters) with controlled lighting.   
-Asset Handling: All identification, inventory recognition, and physical handling of the numismatic assets will be performed exclusively by museum personnel.   
-Group III: Archaeological Coins (Tabarroni Collection)Volume & Dimensions: 3,804 items (including 250 pieces of paper money). Coin diameters range from 5 mm to 100 mm.   Capture Standards: Minimum optical resolution of 600 PPI at the object's real dimension. The camera sensor must be perfectly parallel to the asset. Each shot must include a colorimetric and metric reference in the margins, and a dedicated ICC profile must be created per session. Minimum views required are Obverse and Reverse (Diritto/Rovescio).   File Deliverables: Uncompressed TIFF 6.0 (Master) and high-quality JPEG for web/IIIF (Derivative). Both formats must share the exact same filename. The derivative JPEG must be cropped to remove the colorimetric/metric references.   Naming Convention: InstituteCode + CollectionCode + ObjectCode + ViewIdentifier (D for Diritto, R for Rovescio) + Extension (e.g., MCABo_Num_95812D.tif).   Metadata: A MAG (Metadati Amministrativi Gestionali) XML file containing digitization info and MD5 checksums must be generated for each image.   
-Group IV: Risorgimento Coins & Medals (XIX-XX Century)Volume & Dimensions: Approx. 270 items ranging from 20 mm to 60 mm in diameter.   
-Capture Standards: Identical to Group III (600 PPI, parallel sensor, obverse/reverse views, colorimetric/metric references), but with an added requirement: the shot must explicitly include an indication of the object's identifying inventory number.   File Deliverables & Metadata: Identical to Group III (TIFF Masters, cropped JPEGs, matching filenames, and MAG XML metadata).   
+
+General Project Specifications
+Regulatory Framework: All activities must comply with the National Digitalization Plan (PND) guidelines published by the Central Institute for the Digitalization of Cultural Heritage (Digital Library of the MiC).   
+Prototyping & Delivery: A prototype must be presented within 10 days of starting the work. Final digitized materials must be delivered on electronic hard drives and retained as backups for at least 15 days.   
+Compliance & Safety: All services must comply with workplace safety regulations (Art. 26 of the Testo Unico), the "Do No Significant Harm" (DNSH) principle (Reg. EU 2021/241), climate and digital tagging, and gender equality.   
+
+LOTTO 1: Museo MorandiAssets & Volume: Approximately 320 small-format artworks (oils, watercolors, drawings, engravings) from the 20th century. Dimensions range from 35x30 cm to 85x90 cm (under 100 cm).   
+Required Shots: Approximately 425 shots, as paintings must be photographed both front and back.   
+Location: Operations will take place between the museum's deposits and exhibition rooms (Via don Minzoni 14, Bologna); artworks cannot be moved from the museum.  
+Timeline: The entire intervention must not exceed 9 months from the contract signing. The first tranche runs until May 2026, and the second from July to November 2026.  
+
+File Formats & Resolution:
+
+Master TIFF: TIFF 6.0, uncompressed. 600 dpi for sizes up to A4; 400 dpi for larger than A4. Adobe RGB at 24-bit, or Pro Photo RGB at 48-bit for maximum quality.   
+High-Quality JPEG Derivative: 300 dpi, minimum 3000 pixels on the long edge, maximum quality compression (100%), sRGB or Gray gamma 2.2.   
+Low-Quality JPEG Derivative: 118 dpi, minimum 3000 pixels on the long edge, sRGB or Gray gamma 2.2.   
+
+LOTTO 2: Museo Civico Archeologico & Museo del Risorgimento
+This lot is divided into four distinct groups. All interventions for Lotto 2 must be completed by November 30, 2026.   
+
+GRUPPO I: Etruscan Necropolis Benacci Documentary Cards
+
+Assets: 929 loose sheets (21x15 cm) totaling 1042 sides to digitize.   
+Capture Specs: Recto and verso (if written). 400 DPI at real dimension, native ISO, Adobe RGB. A colorimetric and metric reference must be included in the margins. A ColorChecker and dedicated ICC profile are required for each session.   
+File Specs: Uncompressed TIFF 6.0 and JPEG (minimum 75% quality). MAG XML metadata containing MD5 checksums is required.   
+Location: Digitization takes place at the supplier's premises.   
+
+GRUPPO II: Etruscan Necropolis Benacci Technical Drawings
+
+Assets: Approximately 1,570 sheets (A4, A3, and out-of-scale) containing around 5,250 technical drawings in pencil.   
+Capture Specs: 400 PPI up to A4; 300 PPI for sizes larger than A4. Native ISO, Adobe RGB, with colorimetric/metric references.   
+Processing Specs: Requires automatic recognition and cropping of individual drawings while maintaining correct metric scales. An experimental phase involves automatic removal/cleaning of construction lines ("denoising").   
+Deliverables: ~1,570 TIFF+JPEG files of the full sheets, plus ~5,250 TIFF+JPEG files of the individually cropped drawings. MAG XML required.   Location: Digitization takes place at the supplier's premises.   
+
+GRUPPO III: Tabarroni Numismatic Collection (Archeologico)
+
+Assets: 3,804 items, including 250 pieces of paper money/credit documents. Coins range from 5 mm to 100 mm in diameter; paper items up to 35x27 cm. Materials include metal, plaster, and paper.   
+Capture Specs: 600 PPI at real dimension, sensor perfectly parallel and centered to the asset, native ISO, Adobe RGB. Minimum views required are Obverse (Diritto) and Reverse (Rovescio). A colorimetric and metric reference must be in the margin of every shot.   
+File Specs: Uncompressed TIFF 6.0 Master. A high-quality JPEG derivative must be generated and cropped to remove the colorimetric and metric references. MAG XML required.   
+Naming Convention: InstituteCode + CollectionCode + ObjectCode + View (D for Diritto, R for Rovescio) + Extension (e.g., MCABo_Num_95812D.tif).   
+Location: Museo Civico Archeologico (Via dell'Archiginnasio 2) in an exclusive space (min. 2 sq meters) with controlled lighting. Museum staff will handle all asset movement and identification.   
+
+GRUPPO IV: 19th-20th Century Numismatic Assets (Risorgimento)
+
+Assets: Approximately 270 medals, decorations, badges, and 2 medal cabinets (40x40 cm). Coin diameters range from 20 mm to 60 mm.  
+Capture Specs: 600 PPI at real dimension, sensor parallel/centered, native ISO, Adobe RGB. Minimum views: Obverse and Reverse. The shot must include a colorimetric/metric reference and explicitly indicate the object's identifying inventory number.   
+File Specs: Uncompressed TIFF 6.0 Master and a high-quality JPEG cropped to remove references. MAG XML required.   
+Naming Convention: Follows a schema agreed upon with the museum.   
+Location: Museo Civico Archeologico (Via dell'Archiginnasio 2). Museum staff will handle all asset movement and identification.  
+
+
+### September 25, 2026: Museum Capture Session & Workflow Testing
+
+**Location:** Museo Civico (Equipment retrieved from AD Lab prior to arrival)
+**Software:** Capture One (Session Name: `risorgimentale_25_set_2026`)
+**Total Output:** 38 medals
+
+#### Pre-Production & Workstation Setup
+
+* **Environment:** Ambient room lights were turned off to prevent light interference during workstation adjustment and capture.
+* **Surface Preparation:** Cleaned the 15x15 cm black shooting surface with a lint roller. The surface features an underlying height-adjustment mechanism, which was used to set the optimal distance between the object and the camera for sharpest focus.
+* **Technical Guidelines:** Referred to a standardized instruction sheet detailing height, lens type, and focus point requirements based on object size (categorized as either under 5 cm or over 5 cm).
+* **Team Roles:**
+* **Silvia:** Reads inventory numbers aloud from the museum's provided list.
+* **Marco:** Retrieves medals from the box, places them on the shooting surface, and handles the physical flipping of the objects.
+* **Michela:** Triggers the camera captures remotely via the Capture One application.
+
+
+
+#### Naming & Capture Protocol
+
+* **File Format:** NEF (Nikon RAW).
+* **Alignment:** Object centering is managed using the Capture One guide section, overlaying red grid lines onto the live view to ensure precise positioning.
+* **Standard Naming Convention:**
+1. `[Inventory Number]_INV` (Target photo including the color checker).
+2. `[Inventory Number]_D` (Dritto / Obverse / Up).
+3. `[Inventory Number]_R` (Rovescio / Reverse / Down).
+
+
+
+#### Chronological Session Log
+
+* **10:17 – Calibration (Objects < 5cm):** Mounted the macro lens and began manual focus adjustments. Set the Moiré reduction tool in Capture One to 100%. Because live view is insufficient for precise focus, calibration required taking test shots, adjusting surface height, and reviewing the captured files at 100% zoom.
+* **11:02 – Focus Locked:** Achieved sharp focus for the micro-objects.
+* **11:08 – Color Balancing:** Performed color calibration. The software preview occasionally renders the image as overly blue, dark, or gold. Test shots were taken to verify actual color reproduction versus screen rendering, as the dark ambient room makes naked-eye color verification difficult.
+* **11:15 – Production Start:** First shot taken.
+* **11:18 – Edge Case (Physical Stickers):** The third medal featured a physical sticker (*bollino*) attached to it. The workflow was adapted: took the `_INV` photo with the sticker attached, carefully removed the sticker, and then captured the `_D` and `_R` shots (resulting in 3 photos total).
+* **11:28 – QA Failure & Rework:** A quality check revealed the images were slightly out of focus. We confirmed that focus cannot be reliably judged via live view and must be checked on fully rendered shots. Re-captured the affected medals.
+* **11:31 – Resume & Edge Case (Ribbons):** Resumed capturing. For medals featuring short ribbons, the ribbon was included in the `_INV` shot.
+* **11:45 – QA Check:** Verified focus on a highly illegible medal. Confirmed the text was perfectly sharp at 100% zoom. Cleaned the shooting surface again to remove accumulated dust.
+* **12:06 – Domain Expert Consultation:** Encountered three medals attached to a single ribbon, sharing only one inventory number. Consulted the museum manager, who instructed us to digitize only one of the three.
+* **12:14 – Lens Swap:** Finished all small medals (< 5 cm). Swapped to the standard lens for larger medals.
+* **12:21 – Calibration (Objects > 5cm):** Repositioned the camera and moved the fixed ruler. Utilized the app's autofocus feature (supported by the standard lens), followed by manual fine-tuning.
+* **12:28 – Production Start:** Began capturing large medals.
+* **12:36 – QA Failure & Process Breakdown:** Discovered the physical ruler was misaligned. The three large medals shot so far had to be redone. The operator deleted the flawed photos from the system without writing down their inventory numbers first. **Risk Realized:** Because the team was shooting by physical size rather than the strict list order, and because not all items in the box were designated for digitization, losing the digital record made it highly difficult to identify which specific physical medals needed to be pulled back out for a re-shoot.
+* **13:00 – Missing Item:** Discovered one small medal had been accidentally skipped.
+* **13:03 – Lens Swap:** Finished all large medals. Switched back to the macro lens to capture the single missed small medal.
+* **13:09 – Capture Complete:** Began cross-referencing the total digital file count against Silvia's checked-off physical inventory list.
+* **13:14 – Validation Complete:** Count perfectly matched. 38 medals successfully processed.
+* **13:17 – Teardown:** Powered down the workstation, packed up the camera and lenses, and returned to the AD Lab.
 
 
 questions:
-as for the pictures of back and front of each coin we will use the sollution of adding D for the front (where the worth of the coin isn't mentioned) and R for the back (where the worth of the coin is mentioned) to the coin ID in the file name, what approach should we have for the Medals?
 
-Should I just focus on the Risorgimento coins for now or the medals?
+
